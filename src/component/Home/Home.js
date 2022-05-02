@@ -1,12 +1,19 @@
 import React from 'react';
-import Header from '../Header/Header';
+import useProduct from '../Hooks/useProduct';
+
 
 const Home = () => {
+
+    const [products] = useProduct()
     return (
         <div>
-           <Header></Header>
-            <h1>this is home</h1>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In earum, aut hic velit molestias illo. Amet delectus temporibus voluptatibus aspernatur! Quibusdam autem sint recusandae sed numquam repellat iste perspiciatis cupiditate.
+           <section></section>
+           <section>
+               {products.slice(0.6).map(product =>{})}
+           </section>
+           <section></section>
+            
+          
         </div>
     );
 };
