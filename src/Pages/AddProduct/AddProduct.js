@@ -1,9 +1,16 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddProduct = () => {
     const { register, handleSubmit } = useForm();
-    
+
+    const addProduct = () =>{
+        toast('Product added');
+        console.log('Product added');
+    }
+
     const onSubmit = data => {
         console.log(data);
         const url = `http://localhost:5000/product`;
@@ -29,7 +36,10 @@ const AddProduct = () => {
                 <textarea className='mb-2' placeholder='Description' {...register("description")} />
                 <input className='mb-2' placeholder='Price' type="number" {...register("price")} />
                 <input className='mb-2' placeholder='Photo URL' type="text" {...register("img")} />
-                <input type="submit" value="Add Service" />
+                <input type="submit" onClick={addProduct} value="Add Service" />
+                {
+                    <ToastContainer></ToastContainer>
+                }
             </form>
         </div>
     );
