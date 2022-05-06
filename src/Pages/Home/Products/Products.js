@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Product from "../Product/Product";
-
-
 import "./Products.css";
 
 const Products = () => {
@@ -18,17 +16,9 @@ const Products = () => {
       <div className="row">
         <h1 className="text-primary text-center mt-5"> Inventory Product</h1>
         <div className="product_container">
-          {
-              products.slice(0,6).map(product =><Product key ={product.id}
-                                                        product={product}
-              >
-
-              </Product>)
-          }
-
-          {
-            console.log(products)
-          }
+          {products.slice(0, 6).map((product) => (
+            <Product key={product._id} product={product}></Product>
+          ))}
         </div>
       </div>
     </div>
