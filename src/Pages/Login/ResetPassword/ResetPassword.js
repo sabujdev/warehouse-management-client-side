@@ -9,7 +9,7 @@ import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 
-const Login = () => {
+const ResetPassword = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
@@ -81,7 +81,7 @@ const Login = () => {
             {errorElement}
             <p>New to Best Electronic? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> 
             </p>
-            <p>Forget Password? <Link to =''><button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </Link></p>
+            <p>Forget Password? <Link to ='/resetPass'><button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </Link></p>
            <SocialLogin></SocialLogin>
             
             <ToastContainer />
@@ -89,7 +89,7 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default ResetPassword;
 
 
 
