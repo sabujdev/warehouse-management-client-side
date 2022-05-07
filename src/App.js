@@ -9,6 +9,7 @@ import Register from './Pages/Login/Register/Register';
 import RequireAuth from './Pages/Login/RequireAuth/ReuireAuth';
 import ResetPassword from './Pages/Login/ResetPassword/ResetPassword';
 import ManageProduct from './Pages/ManageProducrt/ManageProduct';
+import Order from './Pages/Order/Order';
 import ProductDetail from './Pages/ProductDetail/ProductDetail';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
@@ -36,11 +37,18 @@ function App() {
           <AddProduct></AddProduct>
         </RequireAuth>
         }></Route>
+
           <Route path="/manage" element={
           <RequireAuth>
           <ManageProduct></ManageProduct>
         </RequireAuth>
         }></Route>
+          <Route path="/order" element={
+          <RequireAuth>
+          <Order></Order>
+        </RequireAuth>
+        }></Route>
+
           <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
       <Footer></Footer>
