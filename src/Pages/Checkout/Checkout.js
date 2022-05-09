@@ -20,7 +20,7 @@ const Checkout = () => {
             address:e.target.address.value,
             phone:e.target.phone.value,
         }
-        axios.post('http://localhost:5000/order' ,order)
+        axios.post('https://afternoon-brushlands-30832.herokuapp.com/order' ,order)
         .then(res =>{
             const {data} = res;
             if(data.insertedId){
