@@ -46,7 +46,7 @@ const Header = () => {
                     Manage Product
                   </Nav.Link>
                   <Nav.Link as={Link} to="/order">
-                    Order
+                    My item
                   </Nav.Link>
                  
                  

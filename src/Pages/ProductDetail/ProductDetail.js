@@ -6,7 +6,7 @@ import useProductDetail from '../../hooks/useProductDetail';
 const ProductDetail = () => {
     const { productId } = useParams();
 const [product] = useProductDetail(productId)
-console.log(product);
+// console.log(product);
 
     return (
         <div>

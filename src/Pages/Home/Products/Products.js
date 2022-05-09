@@ -4,14 +4,12 @@ import "./Products.css";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
-
   useEffect(() => {
     fetch("https://afternoon-brushlands-30832.herokuapp.com/product")
-      // http://localhost:5000/product
+      
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
-
   return (
     <div id="products" className="container">
       <div className="row">
@@ -22,7 +20,7 @@ const Products = () => {
           ))}
         </div>
       </div>
-    </div>
+    </div> 
   );
 };
 
