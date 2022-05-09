@@ -2,11 +2,11 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  margin: 50px;
+  margin: 30px;
 }
 .qus {
   border: 2px solid rgb(204, 185, 185);
   border-radius: 20px;
   padding: 20px;
-  width: 500px;
+  width: 400px;
 }

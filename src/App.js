@@ -8,7 +8,6 @@ import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import RequireAuth from './Pages/Login/RequireAuth/ReuireAuth';
-import ResetPassword from './Pages/Login/ResetPassword/ResetPassword';
 import ManageProduct from './Pages/ManageProducrt/ManageProduct';
 import Order from './Pages/Order/Order';
 import ProductDetail from './Pages/ProductDetail/ProductDetail';
@@ -31,8 +30,6 @@ function App() {
         }></Route>
           <Route path="/register" element={<Register></Register>}></Route>
           <Route path='/login' element={<Login></Login>}></Route>
-          {/* <Route path='/resetPass' element={<ResetPassword></ResetPassword>}></Route> */}
-
           <Route path="/addProduct" element={
           <RequireAuth>
           <AddProduct></AddProduct>
